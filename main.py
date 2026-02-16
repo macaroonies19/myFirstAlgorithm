@@ -1,4 +1,5 @@
 Order = 'none'
+OrderMore = 'none'
 print(Order)
 def menu():
     Menu = ['Burger, Chocolate Milk, Garlic Bread, Juice, Pasta, Scroll']
@@ -11,6 +12,11 @@ def menu():
 
 def order():
     print('Added to cart')
+    OrderMore = input('Would you like anything else? ')
+    if OrderMore == 'yes':
+        Order2 = input('What else would you like? ')
+    else:
+     return order()
 
 order()
 menu()
